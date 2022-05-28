@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  background-color: white;
+  border-radius: 10px;
+  width: min(500px,100%);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  position: relative;
+  padding: 20px;
+}
+.card__icon{
+  height: 100%;
+  width: 50px;
+}
+.card__icon > i{
+  font-size: 50px;
+}
+
+.card__author{
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+}
+.card__btn{
+  background-color: lightgrey;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1;
+  font-size: 20px;
+  box-shadow: 3px 1px 5px 0px #000a;
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+}
+.card__btn:active{
+  box-shadow: 0 0 0 0 #000a;
+  transition: box-shadow 200ms ease;
+}
