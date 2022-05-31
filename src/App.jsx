@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Card from './components/Card'
+import QuoteBox from './components/QuoteBox'
 import users from './JSON/quotes.json'
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
     return array[i]
   }
 
-  const [colorRandom, setcolorRandom] = useState(getElementRandom(users))
-  const [userRandom, setuserRandom] = useState(getElementRandom(colors))
+  const [colorRandom, setcolorRandom] = useState(getElementRandom(colors))
+  const [userRandom, setuserRandom] = useState(getElementRandom(users))
 
   const clickButton = () => {
     setuserRandom(getElementRandom(users))
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div style={style} className="App">
-      <Card 
+      <QuoteBox 
        colorRandom={colorRandom}
        userRandom={userRandom}
        clickButton={clickButton}
